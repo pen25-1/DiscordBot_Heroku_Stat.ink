@@ -307,9 +307,8 @@ async def get_cookie_discord(session_token, userLang, ver, ctx_channel: commands
             'Accept-Encoding':  'gzip'
         }
     except:
-        await ctx_channel.send(f"Error from Nintendo (in Account/Login step):\
-
-		{json.dumps(splatoon_token, indent=2)}")
+        await ctx_channel.send(f"Error from Nintendo (in Account/Login step):" + 
+			       json.dumps(splatoon_token, indent=2))
         return
 
     body = {}
