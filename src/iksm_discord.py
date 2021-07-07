@@ -21,7 +21,7 @@ import basic
 sys.path.append(f"{os.path.dirname(__file__)}/../splatnet2statink")  # noqa
 #from iksm import call_flapg_api, get_session_token, version_NSO, A_VERSION  # noqa
 A_VERSION = "1.5.10"
-version_NSO = "1.10.1"
+version_NSO = "1.11.0"
 
 session = requests.Session()
 
@@ -121,7 +121,7 @@ async def auto_upload_iksm():
         #	os.remove(f"{tmp_dir}/config.txt")
 
 
-async def autoUploadCycle(next_time=900):
+async def autoUploadCycle(next_time=60):
     config_path = f"{basic.const_paths['tmp_dir' if basic.IsHeroku else 'splat_dir']}/config.txt"
     if not os.path.isfile(config_path):
         with open(config_path, "w") as f:
