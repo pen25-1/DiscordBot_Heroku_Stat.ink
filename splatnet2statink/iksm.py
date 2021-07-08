@@ -292,9 +292,6 @@ def get_hash_from_s2s_api(id_token, timestamp): # use for discord
     # check to make sure we're allowed to contact the API. stop spamming my web server pls
     """config_data={}
 
-	# check to make sure we're allowed to contact the API. stop spamming my web server pls
-	"""config_data={}
-
 	try:
 		with open(config_path, "r") as f:
 			config_data = json.loads(f.read()) # fileが存在しない場合に
